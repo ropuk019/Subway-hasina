@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Hasina Runner</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/game.css">
+  <link rel="stylesheet" href="styles/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Main Menu -->
+    <div id="main-menu" class="screen">
+      <h1>Hasina Runner</h1>
+      <div class="menu-buttons">
+        <button id="play-button" class="menu-button">Play</button>
+        <button id="heroes-button" class="menu-button">Heroes</button>
+      </div>
+    </div>
+
+    <!-- Heroes Selection Screen -->
+    <div id="heroes-screen" class="screen hidden">
+      <h2>Heroes</h2>
+      <div class="heroes-grid">
+        <div class="hero-card active" data-hero="hasina">
+          <div class="hero-image">
+            <img src="assets/images/hasina/idle.png" alt="Hasina">
+          </div>
+          <h3>Hasina</h3>
+        </div>
+        <div class="hero-card locked" data-hero="hero2">
+          <div class="hero-image">
+            <img src="assets/images/locked.png" alt="Locked Hero">
+          </div>
+          <h3>Coming Soon</h3>
+        </div>
+        <div class="hero-card locked" data-hero="hero3">
+          <div class="hero-image">
+            <img src="assets/images/locked.png" alt="Locked Hero">
+          </div>
+          <h3>Coming Soon</h3>
+        </div>
+      </div>
+      <button id="back-button" class="menu-button">Back</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen hidden">
+      <div id="hud">
+        <div id="score">Score: 0</div>
+        <div id="high-score">High Score: 0</div>
+      </div>
+      <canvas id="game-canvas"></canvas>
+      <div id="controls">
+        <button id="jump-button" class="game-button">JUMP</button>
+        <button id="slide-button" class="game-button">SLIDE</button>
+      </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over" class="screen hidden">
+      <h2>Game Over</h2>
+      <div id="final-score">Score: 0</div>
+      <div id="new-high-score" class="hidden">New High Score!</div>
+      <button id="restart-button" class="menu-button">Play Again</button>
+      <button id="menu-button" class="menu-button">Main Menu</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
